@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 
 import "./globals.css";
 import Providers from "./providers";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
-          <Navbar />
-          <Providers>
-            {children}
-          </Providers>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={inter.className}>
+      <Navbar />
+        <Providers>
+          {children}
+        </Providers>
+      </body>
+    </html>
   );
 }

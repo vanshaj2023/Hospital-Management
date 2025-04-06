@@ -20,7 +20,6 @@ import CreditCardIcon from './icons/CreditCardIcon'
 import TestLogo from './icons/TestLogo'
 import SettingsIcon from './icons/SettingIcon'
 import MenuIcon from './icons/MenuIcon'
-import { UserButton } from '@clerk/nextjs'
 
 const navigation = [
     { name: 'Overview', href: '#', current: false , svgIcon: <HomeIcon /> },
@@ -153,7 +152,7 @@ const Navbar = () => {
                       <MenuItem>
                         {({ focus }) => (
                           <a
-                            href="/sign-in"
+                            href="#"
                             className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
